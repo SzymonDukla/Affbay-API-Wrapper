@@ -67,7 +67,6 @@ print_r($result);
 ```
 affbay-api-wrapper
 ├── .gitignore
-├── LICENSE
 ├── README.md
 ├── example
 │   ├── index.php

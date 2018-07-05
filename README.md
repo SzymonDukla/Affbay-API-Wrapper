@@ -45,7 +45,7 @@ require_once( __DIR__ . /affbay-api-wrapper/AffbayApi.php
 ...
 ```
 3. Initiate the library with ```$affbay = new AffbayApi( 'your-token-here' )```
-4. Create new contact creating new instance of ```Contact()``` class (see the example script) with properties:
+4. Create a new contact by creating a new instance of ```Contact()``` class (see the example script) with properties:
 ```        
 'first_name' => 'Joe',
 'last_name' => 'Doe',           // optional

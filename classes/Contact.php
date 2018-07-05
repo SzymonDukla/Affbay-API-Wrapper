@@ -19,10 +19,10 @@ class Contact extends AffbayApi
         if(!in_array(parent::FIRST_NAME, array_keys($parameters))) {
             throw new AffbayException('first_name must be explicitly provided', 500);
         }
-        if(!in_array(parent::PHONE, array_keys($parameters)) && !in_array('email', array_keys($parameters))) {
-            throw new AffbayException('phone must be explicitly provided', 500);
+        if(!in_array(parent::PHONE, array_keys($parameters)) && !in_array(parent::EMAIL, array_keys($parameters))) {
+            throw new AffbayException('phone OR email must be explicitly provided', 500);
         }
-        if(!in_array(parent::CLICK_ID, array_keys($parameters)) && !in_array('email', array_keys($parameters))) {
+        if(!in_array(parent::CLICK_ID, array_keys($parameters))) {
             throw new AffbayException('click_id must be explicitly provided', 500);
         }
     

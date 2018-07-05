@@ -69,15 +69,14 @@ affbay-api-wrapper
 ├── .gitignore
 ├── README.md
 ├── example
-│   ├── index.php
+│   └── index.php
 ├── classes
 │   ├── AffbayException.php
 │   ├── Auth.php
 │   ├── Contact.php
 │   └── Sender.php
 ├── AffbayApi.php
-├── composer.json
-└── yarn.lock
+└── composer.json
 ```
 
 ### Opening an Issue
@@ -89,5 +88,5 @@ Before opening an issue there are a couple of considerations:
 * **Attempt to look into the issue**, and if you *have a solution, make a pull request*.
 * **Show that you have made an attempt** to *look into the issue*.
 * **Check** to see if the issue you are *reporting is a duplicate* of a previous reported issue.
-* **Following these instructions show us that you have tried.**
+* **Follow these instructions and show us that you have tried.**
 * If you have a questions or comments don't hesitate to [give us a shout](https://affbay.asia/contact)!

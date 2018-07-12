@@ -1,0 +1,675 @@
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="poptm" content="98c1fc7c468b6f60a59dcbe45297dae5">
+    <title>Garcinia Cambogia</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="assets/css/bundle.css">
+    <style>#buyForm input, #buyForm label {
+            width: 98%;
+            display: block;
+            margin: 10px auto
+        }
+
+        #buyForm button {
+            display: block;
+            margin: 10px auto
+        }</style>
+</head>
+<body>
+
+<style>
+    body {
+        padding-top: 120px
+    }
+
+    .promo, .promo__timer-wrapper {
+        text-align: center
+    }
+
+    .comeback_layout {
+        display: none;
+        color: #000;
+        left: 0;
+        height: 100%;
+        z-index: 20000000;
+        background: rgba(0, 0, 0, .75);
+        overflow-y: scroll;
+        padding-top: 6%
+    }
+
+    .comeback_wrapper {
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto
+    }
+
+    .promo {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, .9);
+        border-bottom: solid 3px #794293;
+        height: 120px;
+        right: 0;
+        z-index: 100;
+        font-family: Helvetica, sans-serif
+    }
+
+    .promo__wrapper {
+        height: 120px;
+        max-width: 980px;
+        margin: 0 auto 80px;
+        font-size: 35px;
+        display: flex;
+        justify-content: space-around;
+        color: #000;
+        align-items: center;
+        font-weight: 700
+    }
+
+    .promo__timer {
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+        line-height: 57px
+    }
+
+    .promo__hours, .promo__minutes, .promo__seconds {
+        padding: 0 8px
+    }
+
+    .promo__warning {
+        font-size: 16px
+    }
+
+    .btn1 {
+        height: 60px;
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px
+    }
+
+    .promo__button {
+        font-size: 23px;
+        width: 242px;
+        font-weight: 700;
+        background-color: #794293;
+        color: #fff;
+        display: table;
+        text-decoration: none !important
+    }
+
+    .promo__button span {
+        display: table-cell;
+        vertical-align: middle;
+        text-transform: lowercase
+    }
+
+    .promo .promo__button:hover {
+        text-decoration: none;
+        color: #fff
+    }
+
+    .promo__discount {
+        text-transform: lowercase
+    }
+
+    @media screen and (max-width: 992px) {
+        .promo__button, .promo__timer, .promo__wrapper {
+            font-size: 18px
+        }
+
+        .promo__button {
+            max-width: 180px
+        }
+
+        .promo__timer {
+            line-height: 26px
+        }
+    }
+
+    @media screen and (max-width: 460px) {
+        .promo__wrapper {
+            flex-wrap: wrap;
+            padding-bottom: 10px
+        }
+
+        .promo__warning {
+            font-size: 15px
+        }
+
+        .btn1 {
+            height: 38px;
+            max-width: none
+        }
+    }</style>
+<div class="promo">
+    <div class="promo__wrapper">
+        <div class="promo__discount">DISKON 50%</div>
+        <div class="promo__timer-wrapper">
+            <div class="promo__warning">Periode diskon terbatas:</div>
+            <div class="promo__timer" id="timer">
+                <div class="promo__hours hours"><span class="hours"></span></div>
+                :
+                <div class="promo__minutes minutes"><span class="min"></span></div>
+                :
+                <div class="promo__seconds seconds"><span class="sec"></span></div>
+            </div>
+        </div>
+        <a class="promo__button btn1" href="#orderFormBorder" id="promoButton"
+           data-scroll><span>PESAN<span></span></span></a></div>
+</div>
+<script>
+    !function (e, t) {
+        "function" == typeof define && define.amd ? define([], function () {
+            return t(e)
+        }) : "object" == typeof exports ? module.exports = t(e) : e.SmoothScroll = t(e)
+    }("undefined" != typeof global ? global : "undefined" != typeof window ? window : this, function (I) {
+        "use strict";
+        var C = {
+            ignore: "[data-scroll-ignore]",
+            header: null,
+            topOnEmptyHash: !0,
+            speed: 500,
+            clip: !0,
+            offset: 0,
+            easing: "easeInOutCubic",
+            customEasing: null,
+            updateURL: !0,
+            popstate: !0,
+            emitEvents: !0
+        }, w = function () {
+            for (var n = {}, e = function (e) {
+                for (var t in e) e.hasOwnProperty(t) && (n[t] = e[t])
+            }, t = 0; t < arguments.length; t++) e(arguments[t]);
+            return n
+        }, c = function (t) {
+            var n;
+            try {
+                n = decodeURIComponent(t)
+            } catch (e) {
+                n = t
+            }
+            return n
+        }, s = function (e) {
+            "#" === e.charAt(0) && (e = e.substr(1));
+            for (var t, n, o = String(e), r = o.length, a = -1, i = "", c = o.charCodeAt(0); ++a < r;) {
+                if (0 === (t = o.charCodeAt(a))) throw new InvalidCharacterError("Invalid character: the input contains U+0000.");
+                1 <= t && t <= 31 || 127 == t || 0 === a && 48 <= t && t <= 57 || 1 === a && 48 <= t && t <= 57 && 45 === c ? i += "\\" + t.toString(16) + " " : i += 128 <= t || 45 === t || 95 === t || 48 <= t && t <= 57 || 65 <= t && t <= 90 || 97 <= t && t <= 122 ? o.charAt(a) : "\\" + o.charAt(a)
+            }
+            try {
+                n = decodeURIComponent("#" + i)
+            } catch (e) {
+                n = "#" + i
+            }
+            return n
+        }, L = function () {
+            return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight)
+        }, A = function (e) {
+            return e ? (t = e, parseInt(I.getComputedStyle(t).height, 10) + e.offsetTop) : 0;
+            var t
+        }, H = function (e, t, n, o) {
+            if (t.emitEvents && "function" == typeof I.CustomEvent) {
+                var r = new CustomEvent(e, {bubbles: !0, detail: {anchor: n, toggle: o}});
+                document.dispatchEvent(r)
+            }
+        };
+        return function (o, e) {
+            var y, r, S, E, t, b, O = {};
+            O.cancelScroll = function (e) {
+                cancelAnimationFrame(b), b = null, e || H("scrollCancel", y)
+            }, O.animateScroll = function (i, c, e) {
+                var s = w(y || C, e || {}), u = "[object Number]" === Object.prototype.toString.call(i),
+                    t = u || !i.tagName ? null : i;
+                if (u || t) {
+                    var l = I.pageYOffset;
+                    s.header && !S && (S = document.querySelector(s.header)), E || (E = A(S));
+                    var d, r, a, n, o, m = u ? i : function (e, t, n, o) {
+                            var r = 0;
+                            if (e.offsetParent) for (; r += e.offsetTop, e = e.offsetParent;) ;
+                            return r = Math.max(r - t - n - 120, 0), o && (r = Math.min(r, L() - I.innerHeight)), r
+                        }(t, E, parseInt("function" == typeof s.offset ? s.offset(i, c) : s.offset, 10), s.clip), f = m - l,
+                        h = L(), p = 0, g = function (e, t) {
+                            var n, o, r, a = I.pageYOffset;
+                            if (e == t || a == t || (l < t && I.innerHeight + a) >= h) return O.cancelScroll(!0), o = t, r = u, 0 === (n = i) && document.body.focus(), r || (n.focus(), document.activeElement !== n && (n.setAttribute("tabindex", "-1"), n.focus(), n.style.outline = "none"), I.scrollTo(0, o)), H("scrollStop", s, i, c), !(b = d = null)
+                        }, v = function (e) {
+                            var t, n, o;
+                            d || (d = e), r = (p += e - d) / parseInt(s.speed, 10), a = l + f * (n = r = 1 < r ? 1 : r, "easeInQuad" === (t = s).easing && (o = n * n), "easeOutQuad" === t.easing && (o = n * (2 - n)), "easeInOutQuad" === t.easing && (o = n < .5 ? 2 * n * n : (4 - 2 * n) * n - 1), "easeInCubic" === t.easing && (o = n * n * n), "easeOutCubic" === t.easing && (o = --n * n * n + 1), "easeInOutCubic" === t.easing && (o = n < .5 ? 4 * n * n * n : (n - 1) * (2 * n - 2) * (2 * n - 2) + 1), "easeInQuart" === t.easing && (o = n * n * n * n), "easeOutQuart" === t.easing && (o = 1 - --n * n * n * n), "easeInOutQuart" === t.easing && (o = n < .5 ? 8 * n * n * n * n : 1 - 8 * --n * n * n * n), "easeInQuint" === t.easing && (o = n * n * n * n * n), "easeOutQuint" === t.easing && (o = 1 + --n * n * n * n * n), "easeInOutQuint" === t.easing && (o = n < .5 ? 16 * n * n * n * n * n : 1 + 16 * --n * n * n * n * n), t.customEasing && (o = t.customEasing(n)), o || n), I.scrollTo(0, Math.floor(a)), g(a, m) || (b = I.requestAnimationFrame(v), d = e)
+                        };
+                    0 === I.pageYOffset && I.scrollTo(0, 0), n = i, o = s, u || history.pushState && o.updateURL && history.pushState({
+                        smoothScroll: JSON.stringify(o),
+                        anchor: n.id
+                    }, document.title, n === document.documentElement ? "#top" : "#" + n.id), H("scrollStart", s, i, c), O.cancelScroll(!0), I.requestAnimationFrame(v)
+                }
+            };
+            var n = function (e) {
+                if (!("matchMedia" in I && I.matchMedia("(prefers-reduced-motion)").matches) && 0 === e.button && !e.metaKey && !e.ctrlKey && "closest" in e.target && (r = e.target.closest(o)) && "a" === r.tagName.toLowerCase() && !e.target.closest(y.ignore) && r.hostname === I.location.hostname && r.pathname === I.location.pathname && /#/.test(r.href)) {
+                    var t = s(c(r.hash)),
+                        n = y.topOnEmptyHash && "#" === t ? document.documentElement : document.querySelector(t);
+                    (n = n || "#top" !== t ? n : document.documentElement) && (e.preventDefault(), O.animateScroll(n, r))
+                }
+            }, a = function (e) {
+                if (history.state.smoothScroll && history.state.smoothScroll === JSON.stringify(y) && history.state.anchor) {
+                    var t = document.querySelector(s(c(history.state.anchor)));
+                    t && O.animateScroll(t, null, {updateURL: !1})
+                }
+            }, i = function (e) {
+                t || (t = setTimeout(function () {
+                    t = null, E = A(S)
+                }, 66))
+            };
+            return O.destroy = function () {
+                y && (document.removeEventListener("click", n, !1), I.removeEventListener("resize", i, !1), I.removeEventListener("popstate", a, !1), O.cancelScroll(), b = t = E = S = r = y = null)
+            }, O.init = function (e) {
+                if (!("querySelector" in document && "addEventListener" in I && "requestAnimationFrame" in I && "closest" in I.Element.prototype)) throw"Smooth Scroll: This browser does not support the required JavaScript methods and browser APIs.";
+                O.destroy(), y = w(C, e || {}), S = y.header ? document.querySelector(y.header) : null, E = A(S), document.addEventListener("click", n, !1), S && I.addEventListener("resize", i, !1), y.updateURL && y.popstate && I.addEventListener("popstate", a, !1)
+            }, O.init(e), O
+        }
+    });
+    var scroll = new SmoothScroll('a[href="#orderFormBorder"]')</script>
+<script type="text/javascript">
+    function getTimeRemaining(e) {
+        var n = Date.parse(e) - Date.parse(new Date), t = Math.floor(n / 1e3 % 60), i = Math.floor(n / 1e3 / 60 % 60);
+        return {total: n, hours: Math.floor(n / 36e5 % 24), minutes: i, seconds: t}
+    }
+
+    function initializeClock(e, n) {
+        var t = document.getElementById(e), i = t.querySelector(".hours"), a = t.querySelector(".min"),
+            r = t.querySelector(".sec");
+
+        function o() {
+            var e = getTimeRemaining(n);
+            i.innerHTML = ("0" + e.hours).slice(-2), a.innerHTML = ("0" + e.minutes).slice(-2), r.innerHTML = ("0" + e.seconds).slice(-2), e.total <= 0 && clearInterval(l)
+        }
+
+        o();
+        var l = setInterval(o, 1e3)
+    }
+
+    var deadline = new Date(Date.parse(new Date) + 9e5);
+    document.addEventListener("DOMContentLoaded", function () {
+        initializeClock("timer", deadline)
+    })</script>
+<div id="wrapper">
+    <div id="post"><a href="#orderFormBorder" class="normalize-link"><h1 class="a1">Garansi Kepuasan<br>Turun berat 10
+                kg hanya dalam 1 bulan</h1></a><a href="#orderFormBorder" class="normalize-link">
+            <div class="box_1"><img src="assets/images/user13.jpg" alt="">
+                <div class="info"><h3>”Pasti Berubah 100%”</h3>
+                    <p>"Dari 70 kg menjadi 51 kg, saya bisa menurunkan berat hingga 19 kg. Saya tetap makan seperti
+                        biasa. Sangat luar biasa!"</p>
+                    <p class="author"><strong>Jessica Putri</strong><br><i></i></p></div>
+            </div>
+        </a><a href="#orderFormBorder" class="normalize-link"><img
+                    style="float:right!important;margin:32px 0 0 10px;width:126px"
+                    src="assets/images/specialist_cqplus_600_s.jpg"></a>
+        <p>Halo</p>
+        <p>Nama saya Robert Anderson, dan saya seorang ahli gizi. Saya sudah berpengalaman lebih dari 15 tahun dalam
+            bidang penurunan berat badan.</p>
+        <p>Sepanjang masa penelitian, saya sudah membantu lebih dari 2000 orang dengan kelebihan berat badan. Pengalaman
+            mereka mengajarkan saya untuk tidak menyepelekan masalah obesitas.</p>
+        <p>Buat saya, menurunkan berat hingga 10 kg merupakan hal yang susah. Lebih susah dari yang dibayangkan siapa
+            pun.</p>
+        <p>Jadi, apa yang harus kita lakukan? Bagaimana caranya menurunkan kelebihan berat ini?</p>
+        <p>Faktanya adalah, untuk bisa melawan obesitas, Anda harus melakukan lebih dari sekadar diet dan mengontrol
+            makanan. Selain berolahraga, Anda juga memerlukan sesuatu yang lebih untuk membantu Anda, seperti senjata
+            yang ampuh untuk melawan kelebihan lemak di tubuh namun harus aman dan efektif.</p>
+        <p>Saya mencoba beragam cara, dan ternyata ada satu cara yang bisa mengurangi berat sampai 2 kg dalam seminggu
+            pertama. Saya juga bertemu dengan orang yang bisa menurunkan berat 1,5 kg dalam 48 jam saja. Dan banyak yang
+            bisa menurunkan hingga 5 kg dalam 2 minggu.</p>
+        <p>Beberapa dari orang-orang yang mengalami obesitas ini juga ada yang turun beratnya hingga <b>20,30,50 kg</b>
+            bahkan lebih.</p>
+        <p>Ini berarti, masalah obesitas bisa teratasi dengan mudah:</p>
+        <ul class="list_belt">
+            <li>Ukuran pinggang turun 15 cm</li>
+            <li>Ukuran perut bagian bawah turun 12 cm</li>
+            <li>Ukuran pantat turun 10 cm</li>
+            <li>Ukuran paha turun 7 cm</li>
+            <li>Ukuran pinggul turun 12 cm</li>
+        </ul>
+        <p>Hasil ini benar-benar terjadi. Dari penemuan saya, cara ini bekerja dalam tiga tingkatan:</p><a
+                href="#orderFormBorder" class="normalize-link"><h3 class="h_benefit">Menghambat Rasa Lapar</h3></a>
+        <p class="p_benefit" style="border-left:3px solid #dcdcdc;padding-left:20px;margin-left:30px">Anda tidak bisa
+            menurunkan berat dengan diet. Rasa lapar akan menghancurkan diet Anda cepat atau lambat. Dengan ini, Anda
+            tidak akan mudah merasa lapar lagi. Nafsu makan akan berkurang dan meningkatkan proses metabolisme.</p><a
+                href="#orderFormBorder" class="normalize-link"><h3 class="h_benefit">Menambah Energi</h3></a>
+        <p class="p_benefit" style="border-left:3px solid #dcdcdc;padding-left:20px;margin-left:30px">Selama beberapa
+            hari, tingkatan energi dalam tubuh Anda akan semakin meningkat. Akan terus seperti itu selama 10 hari
+            kemudian tingkatan energi akan konstan dan Anda akan memiliki 80% energi lebih banyak dari biasanya.</p><a
+                href="#orderFormBorder" class="normalize-link"><h3 class="h_benefit">Berat badan akan secara otomatis
+                berkurang!</h3></a>
+        <p class="p_benefit" style="border-left:3px solid #dcdcdc;padding-left:20px;margin-left:30px">Mulai dari saat
+            Anda ikut program ini, berat badan akan otomatis berkurang. Anda tidak perlu lagi khawatir dengan berat
+            berlebih, tanpa rasa lapar, sampai Anda sendiri lupa sedang berusaha menurunkan berat badan.</p>
+        <p>Bahan apakah yang terkandung di dalamnya? Mengandung ekstrak Garcinia Cambogia dari buah Malabar Tamarind
+            terbaik.</p>
+        <p>Apa yang membuat produk ini lebih unggul dari yang lainnya dan membuat pasien saya bisa menurunkan berat
+            dengan mudah?</p>
+        <p>Kandungan bahannya membantu menurunkan nafsu makan serta membuat tidak ingin ngemil. Sangat penting untuk
+            tidak ngemil selama Anda menurunkan berat badan. Selain itu, produk ini dapat membantu meningkatkan sistem
+            metabolisme. Menghancurkan lemak yang menumpuk di hati serta meluruhkan racun-racun di dalam tubuh Anda.</p>
+        <p>Sebagai tambahan, kandungan ekstrak Garcinia Cambogia ini sangat efektif bekerja langsung untuk menurunkan
+            berat badan. Garcinia Cambogia bekerja efektif pada metabolisme untuk mengendalikan protein, karbohidrat dan
+            lemak, serta membantu menyeimbangkan pembentukan energi dalam tubuh. Dengan mengubah lemak menjadi energi,
+            maka Anda bisa menurunkan berat badan secara cepat dan mudah. Dan kandungan tinggi ekstrak Garcinia Cambogia
+            ini juga mampu melawan radikal bebas yang bisa menyebabkan kerutan di kulit serta terjadinya penimbunan
+            lemak.</p>
+        <p>Hasil penelitian saya, untuk, menurunkan berat secara efektif, Anda memerlukan produk dengan kandungan
+            Garcinia Cambogia aktif dan antioksidan.</p>
+        <p>Saya menemukan pemilik usaha yang memproduksi kapsul Garcinia Cambogia dengan manfaat maksimal. Garcinia
+            Cambogia Forte, mengandung ekstrak Garcinia Cambogia dari buah Malabar Tamarind, mampu mengontrol pembakaran
+            lemak dalam tubuh.</p>
+        <p>Garcinia Cambogia membuat penurunan berat badan menjadi:</p><a href="#orderFormBorder"
+                                                                          class="normalize-link"><h3 class="h_benefit">
+                MUDAH</h3></a>
+        <p class="p_benefit" style="border-left:3px solid #dcdcdc;padding-left:20px;margin-left:30px">Sekarang Anda bisa
+            tahu cara langsing tanpa harus diet ketat, tanpa harus latihan keras, bahkan Anda tidak mengubah pola
+            makanan Anda. Hanya dengan 4 kapsul per hari, Anda akan melihat penurunan berat badan terlihat, dalam
+            beberapa hari.</p><a href="#orderFormBorder" class="normalize-link"><h3 class="h_benefit">ALAMI DAN
+                AMAN</h3></a>
+        <p class="p_benefit" style="border-left:3px solid #dcdcdc;padding-left:20px;margin-left:30px">Ekstrak alami
+            Garcinia Cambogia Forte dari buah Malabar Tamarind, yang berasal dari India, memiliki sifat menurunkan berat
+            badan. Selain itu, Garcinia Cambogia Forte juga memiliki beberapa manfaat lain: menjaga kesehatan kondisi
+            tubuh, meningkatkan kinerja fisik, membantu untuk mengurangi kolesterol tinggi, mengatur tekanan darah,
+            memaksimalkan penyerapan nutrisi dan vitamin dalam tubuh Anda.</p>
+        <p>Ini barangkali adalah cara yang paling efektif untuk menurunkan berat badan dengan cara sehat dan hasilnya
+            tahan lama, serta membuat tubuh menjadi indah dan ramping. Garcinia Cambogia Forte adalah produk asli yang
+            telah lulus uji laboratorium, yang efektivitasnya telah dikonfirmasi oleh ratusan orang yang telah
+            menggunakan Garcinia Cambogia Forte.</p><a href="#orderFormBorder" class="normalize-link">
+            <div class="box_1"><img src="assets/images/user14.jpg" alt="">
+                <div class="info"><h3>Dari Bahan Alami</h3>
+                    <p>Banyak cara menurunkan berat yang malah membuat saya kelelahan dan tidak bertenaga. Tapi yang ini
+                        berbeda, seperti kehilangan berat secara alami saja. Saya merasa lebih ringan dan sehat dalam
+                        waktu yang sama. Saya berhasil menurunkan hingga 24 kg dan Nampak 10 tahun lebih muda dari
+                        biasanya.</p>
+                    <p class="author"><strong>Nurfitria Dwisyanto</strong><br><i>Turun 24 kg dalam 2 bulan</i></p></div>
+            </div>
+        </a>
+        <p>Harap diperhatikan, jika metode ini sama seperti banyak metode lain yang mungkin memiliki hasil yang berbeda
+            untuk setiap orang. Beberapa orang memiliki kelainan bawaan yang mungkin tidak akan berhasil menggunakan
+            metode ini. Akan tetapi perusahan sangat senang bisa menjamin kesuksesan produknya pada banyak orang.</p>
+        <h3>Garansi Unik</h3>
+        <p style="text-align:center;font-size:18px">Kami memberikan Garansi Kepuasan untuk pelanggan dan menjamin hasil
+            maksimal pada setiap pemakaian.</p><a href="#orderFormBorder" class="normalize-link"><h3>Bagaimana cara
+                mendapatkan Garcinia Cambogia Forte dengan harga murah?</h3></a>
+        <p>Kualitas terbaik ekstrak Garcinia Cambogia Forte sulit untuk di dapatkan, jadi harganya tidak bisa murah.
+            Namun, produsen telah memberikan diskon khusus bagi pelanggan yang pertama kali melakukan pembelian Garcinia
+            Cambogia Forte. Anda cukup memesan hari ini, maka Anda akan mendapatkan diskon spesial 50%, untuk alami dan
+            kemurnian tinggi ekstrak Garcinia Cambogia Forte dalam kapsul.</p>
+        <p>Hari ini ada promosi: kemasan Garcinia Cambogia Forte asli HANYA HARI INI dijual dengan harga  490 000 IDR
+            saja.</p>
+        <p>Besok harga akan naik!</p>
+        <p>Anda cukup klik pada tombol order dan mengisi formulir online dengan benar. Garcinia Cambogia Forte akan kami
+            kirimkan ke alamat Anda dalam waktu maks. 2 hari.</p>
+        <p>Secara pribadi, saya yakin bahwa Anda akan sepenuhnya puas. Sebernanya saya berasumsi Anda akan menurunkan
+            berat badan lebih cepat dari yang Anda bayangkan.</p>
+        <p style="text-align:right">Semoga Sukses!<br>Robert Anderson</p>
+        <p style="text-align:center;font-weight:700">Kemasan asli,<br>murni ekstrak Garcinia Cambogia Forte 95%</p><a
+                href="#orderFormBorder" class="normalize-link">
+            <div id="bottle"><img src="assets/images/CIMG0525.png" style="max-height:190px"> <strong>
+                    <center><span style="text-decoration:line-through">980 000 IDR</span><br><span
+                                style="font-size:22px;color:#794293">490 000 IDR</span></center>
+                </strong>
+                <div id="bottle_g"></div>
+            </div>
+        </a>
+        <p style="font-size:16px;text-align:center;line-height:140%">Anda akan menghemat uang Anda jika membayar pada
+            hari ini: mendapatkan diskon langsung sebesar IDR 490 000, pengiriman gratis dan Jaminan Kepuasan. Hanya
+            hari ini!</p><br>
+        <div class="row">
+            <div id="orderFormBorder" class="col-md-12"><p>Tinggalkan nomor telepon Anda, konsultan kami akan segera
+                    menghubungi Anda dan memberikan konsultasi gratis untuk Anda.</p>
+                <p>Pengiriman Garcinia Cambogia Forte dilakukan melalui kurir atau pos, dalam beberapa hari kedepan,
+                    secara gratis. Metode pembayaran: COD (Pembayaran di Tempat).</p><br> <!-- Owner: mateusz -->
+                <!-- START: Form No-Api NewFormWithLabels.php -->
+
+                <!--
+                Important: keep in mind you're using middle-script.php who will handle sending the data to
+                API and redirect you to your custom thank you page
+                -->
+                <form id="buyForm" action="middle-script.php" class="x_order_form buyForm" method="post">
+                    <label for="name">Nama:</label>
+                    <input class="form-control input-form" name="name" id="name" placeholder="" type="text" required>
+                    <label for="email">E-mail:</label>
+                    <input class="form-control input-form" name="email" id="email" placeholder=""
+                           pattern="[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}" type="text" required>
+                    <label for="phone">Nomor Telepon:</label>
+                    <input class="form-control input-form " name="phone" id="phone" placeholder="" type="tel" required>
+                    <input name="product" type="hidden" value="965d28dd-dc2a-4a6a-97f4-8602b8bc9f77">
+                    <button id="orderSubmit" class="submit-form">Beli sekarang</button>
+                </form>
+
+                <!-- START: Form No-Api NewFormWithLabels.php -->
+                <script>
+                    var bindFormControl = function (form, submit, language) {
+                        if (!isDomElement(form)) {
+                            throw 'Invalid form element';
+                        }
+
+                        if (!isDomElement(submit)) {
+                            throw 'Invalid form element';
+                        }
+
+                        submit.addEventListener('click', function () {
+                            var isValid = form.checkValidity();
+                            if (!isValid) {
+                                return false;
+                            }
+
+                            var buttonText = '';
+                            switch (language) {
+                                case 'in':
+                                    buttonText = 'Sedang mengirim, mohon menunggu...';
+                                    break;
+                                case 'th':
+                                    buttonText = 'โปรดรอสักครู่ กำลังส่ง...';
+                                    break;
+                                default:
+                                    buttonText = 'Sending, please wait...';
+                                    break;
+                            }
+
+                            submit.textContent = buttonText;
+                            submit.value = buttonText;
+                            submit.disabled = true;
+                            form.submit();
+                        });
+                    };
+
+                    var isDomElement = function (object) {
+                        return object instanceof Element
+                    }
+                </script>
+
+                <script>
+                    document.querySelectorAll('buyForm')
+                        .forEach(function (form) {
+                            var submit = form.querySelector('.submit-form');
+                            bindFormControl(form, submit, '');
+                        });
+                </script>
+
+            </div>
+        </div>
+        <br><br>
+        <p><strong>PS:</strong> Jangan Lupa, Promo hanya berlaku untuk Hari ini saja</p><br>
+        <p stytle="margin-top:20px;padding-top:0;color:#aaa;max-width:700px;font-size:11px;text-align:center;line-height:normal">
+            Produk ini adalah suplemen diet, bukan obat untuk pengobatan penyakit, suplemen makanan tidak boleh
+            digunakan sebagai pengganti makanan yang bervariasi dan seimbang. Sebuah diet yang bervariasi dan seimbang
+            dan gaya hidup sehat yang dianjurkan. Paket tersebut berisi 30 kapsul dan cukup untuk 1 minggu terapi.</p>
+        <p style="margin-top:0;padding-top:0;color:#aaa;max-width:700px;font-size:11px;text-align:center;line-height:normal">
+            Untuk menyediakan layanan yang efisien, dan kepentingan keselamatan pemilik website ini berhak untuk
+            melakukan perubahan terhadap Kebijakan Privasi. Tindakan ini bertujuan untuk menjaga anonimitas
+            pelanggan-pelanggan. Untuk meningkatkan kepuasan dengan layanan yang diberikan kepada pelanggan-pelanggan,
+            namanya telah diubah demi keamanan dan privasi. Setiap kemiripan dengan orang-orang yang nyata adalah murni
+            kebetulan.</p>
+        <footer id="footer"><a href="#"
+                               onclick='return window.open("https://hottest-goodies.com/footer/privacy-policy_id.php","windowname1","width=1024, height=768, scrollbars=1"),!1'>Kebijakan
+                Privasi</a> <a href="#"
+                               onclick='return window.open("https://hottest-goodies.com/footer/regulations_id.php","windowname1","width=1024, height=768, scrollbars=1"),!1'>Syarat</a>
+            <a href="#"
+               onclick='return window.open("https://hottest-goodies.com/footer/contact_id.php?tr_id=","windowname1","width=1024, height=768, scrollbars=1"),!1'>Kontak</a>
+        </footer>
+    </div>
+    <div id="sidebar">
+        <ul class="testimonials"><a href="#orderFormBorder" class="normalize-link"><a href="#orderFormBorder"
+                                                                                      class="normalize-link">
+                    <li class="opinion"><img src="assets/images/user01.jpg" alt="">
+                        <h3>Berat Turun 12 kg, Pinggang menyusut 8 cm dan paha mengecil 3 cm</h3>
+                        <p>Garcinia Cambogia Forte wajib dicoba. Setelah 1 bulan pemakaian, berat saya turun 12 kg dan
+                            saya menjadi lebih ramping.</p>
+                        <p class="author"><b>Widya Astuti</b><br>Berat Turun <u>12 kg dalam 1 bulan</u></p></li>
+                </a><a href="#orderFormBorder" class="normalize-link">
+                    <li class="opinion"><img src="assets/images/user02.jpg" alt="">
+                        <h3>Produk yang mengubah hidup!</h3>
+                        <p>Obesitas = tidak punya kehidupan sosial. Saya berhasil menurunkan berat badan 25 kg dan
+                            semuanya berubah. Bentuk tubuh indah saya yang sekarang sudah membantu saya mendapatkan
+                            banyak teman baru dan meningkatkan rasa percaya diri.</p>
+                        <p class="author"><b>Nisha Fitriani</b><br>Turun<u> 25 kg dalam 3 bulan</u></p></li>
+                </a><a href="#orderFormBorder" class="normalize-link">
+                    <li class="opinion"><img src="assets/images/user03.jpg" alt="">
+                        <h3>Perut Buncit Hilang, Penurun Berat yang Luar Biasa!</h3>
+                        <p>Cara kerjanya dengan menurunkan nafsu makan. Saya tidak merasakan apapun saat berat mulai
+                            turun 5, 10, 20 kg sampai akhirnya saya berhasil turun 23 kg. saya sangat puas.</p>
+                        <p class="author"><b>Guntur Prasetya</b><br>Turun<u> 23 kg dalam 3 bulan</u></p></li>
+                </a><a href="#orderFormBorder" class="normalize-link">
+                    <li class="opinion"><img src="assets/images/user04.jpg" alt="">
+                        <h3>Hasil yang di luar dugaan!</h3>
+                        <p>Anda hanya perlu minum dua kapsul sebelum sarapan dan sebelum makan malam. Setelah itu, tidak
+                            perlu lagi khawatir dengan apapun. Anda hanya tinggal menunggu dan lihat hasilnya yang
+                            mengagumkan.</p>
+                        <p class="author"><b>Tiara Maharany</b><br>Turun <u>17 kg dalam 2 bulan</u></p></li>
+                </a><a href="#orderFormBorder" class="normalize-link">
+                    <li class="opinion"><img src="assets/images/user05.jpg" alt="">
+                        <h3>Berat Saya Turun dalam Sekejap Mata!</h3>
+                        <p>Pada saat bulan pertama saya berhasil turun 10 kg, kemudian bulan kedua saya turun lagi 7 kg.
+                            ini adalah produk pelangsing terbaik yang pernah saya temukan!</p>
+                        <p class="author"><b>Cintya Sari</b><br>Turun <u>17 kg dalam 2 bulan</u></p></li>
+                </a><a href="#orderFormBorder" class="normalize-link">
+                    <li class="opinion"><img src="assets/images/user06.jpg" alt="">
+                        <h3>Berat Saya Turun!</h3>
+                        <p>Seandainya saya tidak pernah mencoba Garcinia Cambogia Forte, merupakan suatu kesalahan besar
+                            karena dengan ini saya berhasil turun hingga 16 kg. Saya merasa sangat bugar. Bersemangat
+                            dan berenergi!</p>
+                        <p class="author"><b>Sinta Permata</b><br>Turun <u>16 kg dalam 2 bulan</u></p></li>
+                </a><a href="#orderFormBorder" class="normalize-link">
+                    <li class="opinion"><img src="assets/images/user07.jpg" alt="">
+                        <h3>Tidak Gemuk Lagi!</h3>
+                        <p>Berat saya turun hingga 15 kg dan tidak naik lagi setelah 6 bulan sekarang. Saya sangat
+                            merekomendasikan untuk Anda yang mencari produk aman dan teruji!</p>
+                        <p class="author"><b>Nesya Indriani</b><br>Turun by <u>15 kg dalam 2 bulan</u></p></li>
+                </a><a href="#orderFormBorder" class="normalize-link">
+                    <li class="opinion"><img src="assets/images/user08.jpg" alt="">
+                        <h3>Membuat Lemak Menghilang!</h3>
+                        <p>Beratku turun 3-4 kg dalam satu minggu, Garcinia Cambogia Forte ini betul-betul mengenyahkan
+                            lemak di tubuhku! Kapsul ini betul-betul ajaib!</p>
+                        <p class="author"><b>Dimas Aldrian</b><br>Berat Turun <u>15 kg dalam 2 bulan</u></p></li>
+                </a><a href="#orderFormBorder" class="normalize-link">
+                    <li class="opinion"><img src="assets/images/user09.jpg" alt="">
+                        <h3>Betul-betul Sukses!</h3>
+                        <p>Sebelum saya menemukan Garcinia Cambogia Forte, saya selalu gagal dalam menurunkan berat
+                            badan. Dengan ini, hanya dalam 2 bulan saya berhasil menurunkan 20 kg dan akhirnya bisa
+                            mewujudkan impian saya.</p>
+                        <p class="author"><b>Diah Ariani</b><br>Berat turun <u>20 kg dalam 2 bulan</u></p></li>
+                </a><a href="#orderFormBorder" class="normalize-link">
+                    <li class="opinion"><img src="assets/images/user10.jpg" alt="">
+                        <h3>Saya Berhasil Menurunkan Berat Setelah Melahirkan!</h3>
+                        <p>Saya mengikuti saran teman karena saya ingin bisa menurunkan berat seperti teman saya itu.
+                            Entah dengan diet ketat atau olahraga sudah saya coba. Tapi ternyata menggunakan Garcinia
+                            Cambogia Forte yang membuat saya bisa menurunkan berat yang naik saat sedang hamil hingga 19
+                            kg.</p>
+                        <p class="author"><b>Desi Puspita</b><br>Turun <u>19 kg dalam 2 bulan</u></p></li>
+                </a></a></ul>
+    </div>
+    <div id="orderFormBorder" class="col-md-12 show-mobile"><p>Tinggalkan nomor telepon Anda, konsultan kami akan segera
+            menghubungi Anda dan memberikan konsultasi gratis untuk Anda.</p>
+        <p>Pengiriman Garcinia Cambogia Forte dilakukan melalui kurir atau pos, dalam beberapa hari kedepan, secara
+            gratis. Metode pembayaran: COD (Pembayaran di Tempat).</p><br> <!-- Owner: mateusz -->
+        <!-- START: Form No-Api NewFormWithLabels.php -->
+
+        <form id="buyForm" action="https://efirstpanel.com/confirm/" class="x_order_form buyForm" method="post">
+            <label for="name">Nama:</label>
+            <input class="form-control input-form" name="name" id="name" placeholder="" type="text" required>
+            <label for="email">E-mail:</label>
+            <input class="form-control input-form" name="email" id="email" placeholder=""
+                   pattern="[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}" type="text" required>
+            <label for="phone">Nomor Telepon:</label>
+            <input class="form-control input-form " name="phone" id="phone" placeholder="" type="tel" required>
+            <input name="params" type="hidden" value="00">
+            <input name="product" type="hidden" value="965d28dd-dc2a-4a6a-97f4-8602b8bc9f77">
+
+            <input name='token' type='hidden' value='20f035cf-2dd7-48d5-8127-3bea4fcbd303'>
+
+            <button id="orderSubmit" class="submit-form">Beli sekarang</button>
+        </form>
+
+        <!-- START: Form No-Api NewFormWithLabels.php -->
+        <script>
+            var bindFormControl = function (form, submit, language) {
+                if (!isDomElement(form)) {
+                    throw 'Invalid form element';
+                }
+
+                if (!isDomElement(submit)) {
+                    throw 'Invalid form element';
+                }
+
+                submit.addEventListener('click', function () {
+                    var isValid = form.checkValidity();
+                    if (!isValid) {
+                        return false;
+                    }
+
+                    var buttonText = '';
+                    switch (language) {
+                        case 'in':
+                            buttonText = 'Sedang mengirim, mohon menunggu...';
+                            break;
+                        case 'th':
+                            buttonText = 'โปรดรอสักครู่ กำลังส่ง...';
+                            break;
+                        default:
+                            buttonText = 'Sending, please wait...';
+                            break;
+                    }
+
+                    submit.textContent = buttonText;
+                    submit.value = buttonText;
+                    submit.disabled = true;
+                    form.submit();
+                });
+            };
+
+            var isDomElement = function (object) {
+                return object instanceof Element
+            }
+        </script>
+
+        <script>
+            document.querySelectorAll('buyForm')
+                .forEach(function (form) {
+                    var submit = form.querySelector('.submit-form');
+                    bindFormControl(form, submit, '');
+                });
+        </script>
+
+    </div>
+</div>
+</body>
+</html>

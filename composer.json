@@ -1,5 +1,5 @@
 {
-  "name": "'affbay/affbay-api-wrapper'",
+  "name": "affbay/affbay-api-wrapper",
   "description": "A PHP wrapper for Affbay API v2 allows you to create and send leads.",
   "version": "1.0.0",
   "keywords": [

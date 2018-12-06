@@ -31,7 +31,7 @@ Currently only two endpoints are supported:
 Endpoints require different data structure. Thankfully to this wrapper *you DO NOT need to specify or even care about that*. Simply add one or more contacts by creating new instances of ```Contact()``` class and stash them. When pushing your list to Affbay the script will automatically detect and adjust data structure and choose proper endpoint.
 
 ### Installation Instructions
-1. Run `composer install`
+1. Install the package via composer `composer require `
 2. Include main class into your project and add required ```use``` declaration, i.e.
 ```php
 <?php
@@ -40,7 +40,7 @@ use Affbay\AffbayApi\AffbayApi;
 use Affbay\AffbayApi\Contact;
 use Affbay\AffbayApi\AffbayException;
 
-require_once( __DIR__ . /affbay-api-wrapper/AffbayApi.php
+require_once( __DIR__ . /affbay-api-wrapper/AffbayApi.php)
 
 ...
 ```

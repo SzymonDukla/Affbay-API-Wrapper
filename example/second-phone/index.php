@@ -4,7 +4,7 @@ use Affbay\AffbayApi\AffbayApi;
 use Affbay\AffbayApi\Contact;
 use Affbay\AffbayApi\AffbayException;
 
-require_once __DIR__ . '/../../AffbayApi.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 try {
 	

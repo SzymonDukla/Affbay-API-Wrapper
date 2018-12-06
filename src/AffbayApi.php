@@ -46,11 +46,12 @@ class AffbayApi
      */
     private function autoloader()
     {
+        if(!is_dir(__DIR__ . '/../vendor'))
+            throw new AffbayException("Vendor not found");
         if(!class_exists(AffbayException::class)) require_once __DIR__ . '/classes/AffbayException.php';
         if(!class_exists(Auth::class)) require_once __DIR__ . '/classes/Auth.php';
         if(!class_exists(Contact::class)) require_once __DIR__ . '/classes/Contact.php';
         if(!class_exists(Sender::class)) require_once __DIR__ . '/classes/Sender.php';
-        if(!class_exists('\GuzzleHttp\Client')) require_once __DIR__ . '/vendor/autoload.php';
     }
     
     /**
@@ -71,7 +72,12 @@ class AffbayApi
     
     public function push()
     {
-        return $this->sender->send();
+        try {
+            return $this->sender->send();
+        } catch (AffbayException $exception)
+        {
+            return $exception->getMessage();
+        }
     }
     
 }

@@ -1,8 +1,30 @@
 {
-    "name": "'affbay/affbay-api-wrapper'",
-    "type": "library",
-    "minimum-stability": "dev",
-    "require": {
-        "guzzlehttp/guzzle": "^6.3@dev"
+  "name": "'affbay/affbay-api-wrapper'",
+  "description": "A PHP wrapper for Affbay API v2 allows you to create and send leads.",
+  "version": "1.0.0",
+  "keywords": [
+    "holidays",
+    "holiday api",
+    "office holidays"
+  ],
+  "support": {
+    "issues": "https://github.com/affbay/Affbay-API-Wrapper/issues"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Szymon Dukla",
+      "email": "7996340+SzymonDukla@users.noreply.github.com"
     }
+  ],
+  "type": "library",
+  "minimum-stability": "dev",
+  "require": {
+    "guzzlehttp/guzzle": ">5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Affbay\\AffbayApi\\": "src"
+    }
+  }
 }

@@ -43,7 +43,7 @@ class Sender extends AffbayApi
         return $promise->getState();
     }
     
-    protected function send()
+    public function send()
     {
         $list = parent::$contacts;
         $count = count($list);

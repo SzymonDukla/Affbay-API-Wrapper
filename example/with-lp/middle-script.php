@@ -29,7 +29,7 @@ if( $_POST ) {
     }
     
     //  Load Affbay API wrapper file
-    require_once __DIR__ . '/../../AffbayApi.php';
+    require_once __DIR__ . '/../../vendor/autoload.php';
     
     try {
         

@@ -1,6 +1,6 @@
 <?php
 
-use Affbay\AffbayApi\AffbayApi;
+use Affbay\AffbayApi\Client;
 use Affbay\AffbayApi\Contact;
 use Affbay\AffbayApi\AffbayException;
 
@@ -8,7 +8,7 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 
 try {
 	
-	$affbay = new AffbayApi('abcabcabc123');
+	$affbay = new Client('abcabcabc123');
 	
 	/*
 	 * Create new contact

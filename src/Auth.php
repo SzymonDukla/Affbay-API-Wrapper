@@ -2,12 +2,12 @@
 
 namespace Affbay\AffbayApi;
 
-class Auth extends AffbayApi
+class Auth extends Client
 {
     
     public function __construct($token) {
         
-        if(!class_exists(AffbayApi::class)) {
+        if(!class_exists(Client::class)) {
             throw new AffbayException("AffbayApi class not loaded", 500);
         }
         

@@ -2,8 +2,6 @@
 
 namespace Affbay\AffbayApi;
 
-use Throwable;
-
 class AffbayException extends \Exception
 {
     

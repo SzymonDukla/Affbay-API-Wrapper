@@ -41,11 +41,11 @@ Endpoints require different data structure. Thankfully to this wrapper *you DO N
 ```php
 <?php
 
-use Affbay\AffbayApi\AffbayApi;
+use Affbay\AffbayApi\Client;
 use Affbay\AffbayApi\Contact;
 use Affbay\AffbayApi\AffbayException;
 
-require_once( __DIR__ . /vendor/autoload.php)
+require_once( __DIR__ . /vendor/autoload.php);
 
 ...
 ```
@@ -82,12 +82,11 @@ affbay-api-wrapper
 │   │    ├── middle-script.php
 │   └── index.php
 ├── src
-│   ├── classes
-│   │    ├── AffbayException.php
-│   │    ├── Auth.php
-│   │    ├── Contact.php
-│   │    └── Sender.php
-│   └── AffbayApi.php
+│   ├── AffbayException.php
+│   ├── Auth.php
+│   ├── Contact.php
+│   ├── Sender.php
+│   └── Client.php
 ├── .gitignore
 ├── README.md
 └── composer.json

@@ -1,6 +1,6 @@
 <?php
 
-use Affbay\AffbayApi\AffbayApi;
+use Affbay\AffbayApi\Client;
 use Affbay\AffbayApi\Contact;
 use Affbay\AffbayApi\AffbayException;
 
@@ -31,10 +31,10 @@ if( $_POST ) {
     try {
     
         //  Load Affbay API wrapper file
-        require_once __DIR__ . '/../../vendor/autoload.php';
+        require __DIR__ . '/../../vendor/autoload.php';
         
         //  Pass your API token here
-        $affbay = new AffbayApi(API_TOKEN);
+        $affbay = new Client(API_TOKEN);
         
         //  You can explode joint name to first_name and last_name
         //  but this is completely optional step as the API can

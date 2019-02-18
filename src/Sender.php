@@ -1,11 +1,11 @@
 <?php
 
 namespace Affbay\AffbayApi;
-use GuzzleHttp\Client;
+use GuzzleHttp\Client as Guzzle;
 use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Exception\RequestException;
 
-class Sender extends AffbayApi
+class Sender extends Client
 {
     
     private $client;
@@ -14,16 +14,13 @@ class Sender extends AffbayApi
     private $response;
     
     public function __construct() {
-        if(!class_exists(AffbayApi::class)) {
+        if(!class_exists(Client::class)) {
             throw new AffbayException("AffbayApi class not loaded", 500);
         }
-
-        
-        $this->client = new Client([
+        $this->client = new Guzzle([
             'base_uri' => parent::API_BASE,
             'timeout'  => 600,
         ]);
-        
     }
     
     private function request()

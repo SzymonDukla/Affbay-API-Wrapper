@@ -2,7 +2,7 @@
 
 namespace Affbay\AffbayApi;
 
-class Contact extends AffbayApi
+class Contact extends Client
 {
     public $first_name;
     public $last_name;
@@ -13,7 +13,7 @@ class Contact extends AffbayApi
     
     public function __construct($parameters = [], $product = false) {
         
-        if(!class_exists(AffbayApi::class)) {
+        if(!class_exists(Client::class)) {
             throw new AffbayException("AffbayApi class not loaded", 500);
         }
         if(!in_array(parent::FIRST_NAME, array_keys($parameters))) {

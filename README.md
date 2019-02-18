@@ -1,10 +1,11 @@
 #   Affbay API Wrapper
-API Version: 2.0
+API Version: 2.1
 
 Documentation https://affbay.asia/documentation
 
 #### Table of contents
 - [About](#about)
+- [Requirements](#requirements)
 - [Endpoints](#endpoints)
 - [Installation Instructions](#installation-instructions)
 - [File Tree](#file-tree)
@@ -12,6 +13,10 @@ Documentation https://affbay.asia/documentation
 
 ### About
 A PHP wrapper for [Affbay API v2](https://affbay.asia) allows you to create and send leads.
+
+### Requirements
+* Composer
+* Web server with PHP 7.X.X
 
 ### Token
 Prior you can create any lead (contact) you need to create and account and generate a token:

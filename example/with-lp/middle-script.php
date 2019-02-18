@@ -28,10 +28,10 @@ if( $_POST ) {
         $click_id = $_POST['click_id'];
     }
     
-    //  Load Affbay API wrapper file
-    require_once __DIR__ . '/../../vendor/autoload.php';
-    
     try {
+    
+        //  Load Affbay API wrapper file
+        require_once __DIR__ . '/../../vendor/autoload.php';
         
         //  Pass your API token here
         $affbay = new AffbayApi(API_TOKEN);

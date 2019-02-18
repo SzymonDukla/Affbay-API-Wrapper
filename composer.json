@@ -1,7 +1,7 @@
 {
   "name": "affbay/affbay-api-wrapper",
   "description": "A PHP wrapper for Affbay API v2 allows you to create and send leads.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "keywords": [
     "holidays",
     "holiday api",
@@ -20,11 +20,12 @@
   "type": "library",
   "minimum-stability": "dev",
   "require": {
+    "php": "7.*",
     "guzzlehttp/guzzle": ">5.0"
   },
   "autoload": {
     "psr-4": {
-      "Affbay\\AffbayApi\\": "src"
+      "Affbay\\AffbayApi\\": "src/"
     }
   }
 }

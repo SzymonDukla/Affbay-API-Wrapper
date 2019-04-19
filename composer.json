@@ -2,7 +2,6 @@
   "name": "affbay/affbay-api-wrapper",
   "type": "library",
   "description": "A PHP wrapper for Affbay API v2 allows you to create and send leads.",
-  "version": "2.0.0",
   "authors": [
     {
       "name": "Szymon Dukla",

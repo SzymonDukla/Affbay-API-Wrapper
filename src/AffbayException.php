@@ -1,6 +1,6 @@
 <?php
 
-namespace Affbay\AffbayApi;
+namespace Affbay;
 
 class AffbayException extends \Exception
 {

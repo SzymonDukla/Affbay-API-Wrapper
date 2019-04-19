@@ -41,15 +41,15 @@ Endpoints require different data structure. Thankfully to this wrapper *you DO N
 ```php
 <?php
 
-use Affbay\AffbayApi\Client;
-use Affbay\AffbayApi\Contact;
-use Affbay\AffbayApi\AffbayException;
+use Affbay\Client;
+use Affbay\Contact;
+use Affbay\AffbayException;
 
 require_once( __DIR__ . /vendor/autoload.php);
 
 ...
 ```
-3. Initiate the library with ```$affbay = new AffbayApi( 'your-token-here' )```
+3. Initiate the library with ```$affbay = new Client( 'your-token-here' )```
 4. Create a new contact by creating a new instance of ```Contact()``` class (see the example script) with properties:
 ```        
 'first_name' => 'Joe',

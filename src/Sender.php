@@ -1,6 +1,6 @@
 <?php
 
-namespace Affbay\AffbayApi;
+namespace Affbay;
 use GuzzleHttp\Client as Guzzle;
 use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Exception\RequestException;

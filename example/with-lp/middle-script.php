@@ -1,8 +1,8 @@
 <?php
 
-use Affbay\AffbayApi\Client;
-use Affbay\AffbayApi\Contact;
-use Affbay\AffbayApi\AffbayException;
+use Affbay\Client;
+use Affbay\Contact;
+use Affbay\AffbayException;
 
 //  Define your landing page
 define('YOUR_LANDING_PAGE', 'http://icons.iconarchive.com/icons/atyourservice/service-categories/256/Amazing-icon.png');

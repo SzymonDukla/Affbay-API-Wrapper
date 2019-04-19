@@ -1,10 +1,10 @@
 <?php
 
-namespace Affbay\AffbayApi;
+namespace Affbay;
 
 class Client
 {
-    /**@var \Affbay\AffbayApi\Auth */
+    /**@var \Affbay\Auth */
     protected $authenticator;
     
     const API_BASE = 'https://efirstpanel.com/api/';
@@ -29,7 +29,7 @@ class Client
      *
      * @param $token
      *
-     * @throws \Affbay\AffbayApi\AffbayException
+     * @throws \Affbay\AffbayException
      */
     public function __construct($token) {
         $this->authenticator = new Auth($token);

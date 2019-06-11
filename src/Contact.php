@@ -4,14 +4,9 @@ namespace Affbay;
 
 class Contact extends Client
 {
-    public $first_name;
-    public $last_name;
-    public $email;
-    public $phone;
-    public $click_id;
-    public $product;
+    public $data;
     
-    public function __construct($parameters = [], $product = false) {
+    public function __construct($parameters = []) {
         
         if(!class_exists(Client::class)) {
             throw new AffbayException("AffbayApi class not loaded", 500);
@@ -26,56 +21,13 @@ class Contact extends Client
             throw new AffbayException('click_id must be explicitly provided', 500);
         }
     
-        $this->first_name   = $parameters[parent::FIRST_NAME] ?? '';
-        $this->last_name    = $parameters[parent::LAST_NAME] ?? '';
-        $this->email        = $parameters[parent::EMAIL] ?? '';
-        $this->phone        = $parameters[parent::PHONE] ?? '';
-        $this->click_id     = $parameters[parent::CLICK_ID] ?? '';
-    
-        $this->product      = $product;
+        $this->data = $parameters;
         
-    }
-    
-    public function setFirstName($value)
-    {
-        return $this->first_name = $value;
-    }
-    
-    public function setLastName($value)
-    {
-        return $this->first_name = $value;
-    }
-    
-    public function setPhone($value)
-    {
-        return $this->first_name = $value;
-    }
-    
-    public function setEmail($value)
-    {
-        return $this->email = $value;
-    }
-    
-    public function setClickId($value)
-    {
-        return $this->click_id = $value;
-    }
-    
-    public function setProduct($value)
-    {
-        return $this->product = $value;
     }
 
     public function get()
     {
-        return [
-            parent::FIRST_NAME => $this->first_name,
-            parent::LAST_NAME => $this->last_name,
-            parent::PHONE => $this->phone,
-            parent::EMAIL => $this->email,
-            parent::CLICK_ID => $this->click_id,
-            parent::SKU => $this->product,
-        ];
+        return $this->data;
     }
     
     public function stash()
